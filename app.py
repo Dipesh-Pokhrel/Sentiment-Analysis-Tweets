@@ -14,3 +14,7 @@ def remove_pattern(input_txt, pattern):
     for i in r:
         input_txt = re.sub(i, '', input_txt)
     return input_txt
+
+def count_punctuation(text):
+    count = sum([1 for char in text if char in string.punctuation])
+    return round(count / (len(text) - text.count('')), 3) * 100
