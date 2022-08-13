@@ -10,32 +10,9 @@ body{
     overflow: hidden;
 }
 
-header{
-    background: #03A9F4 #35434a;
-    border-color: #448AFF 3px solid;
-    height: 120px;
-    width: 100%;
-    padding-top: 300px;
-}
-
-.main-header{
-    text-align: center;
-    background-color: blue;
-    height: 100px;
-    width: 100%;
-    margin: 0px;
-}
-
-#brandname {
-    float: left;
-    font-size: 30px;
-    color: #fff;
-    margin: 0px;
-}
-
 header h2{
     text-align: center;
-    color: #fff;
+    color: rgb(30, 27, 27);
 }
 
 .btn-info {
@@ -43,16 +20,21 @@ header h2{
     border-color: #03A9F4;
     height: 40px;
     width: 100px;
+    
 }
 
 .btn-info:hover {
     background-color: #03A9F4;
 }
 
-.results {
-    border-radius: 15px 50px;
-    background: #345fe3;
-    padding: 20px;
-    width: 200px;
+textarea {
+    width: 100%;
     height: 150px;
-}
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
