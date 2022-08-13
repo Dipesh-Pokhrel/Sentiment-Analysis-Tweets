@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
 import re
@@ -43,3 +43,23 @@ X = pd.DataFrame(X.toarray())
 # Training Model
 classifier = LogisticRegression(C=0.1, max_iter=1000)
 classifier.fit(X, y)
+
+@app.route('/')
+def home_page():
+    return render_template('home.html')
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    if request.method == 'POST':
+        tweet = request.form['tweet']
+        tweet = remove_pattern(tweet, "@[\w]*")
+        tweet = tweet.split()
+        tweet = [stemmer.stem(i) for i in tweet]
+        tweet = ' '.join(tweet)
+        data = [tweet]
+        data = cv.transform(data).toarray()
+        my_prediction = classifier.predict(data)
+        return render_template('result.html', prediction=my_prediction)
+
+if __name__ == '__main__':
+    app.run(debug=True)
