@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title> Result </title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/styles.css') }}">
 </head>
 
 <body>
@@ -18,14 +18,14 @@
 
     <div class="container">
 
-        {% if predection == 1 %}
+        {% if prediction == 1 %}
             <p style="color:green; font-size:20px; text-align:center;"><b>Positive</b></p>
-        {% else %}
+        {% elif prediction == 0 %}
             <p style="color:red; font-size:20px; text-align:center;"><b>Negative</b></p>
         {% endif %}
     </div>
     <a href="{{ url_for('home_page') }}">
-        <input type="submit" value="Go Back" class="btn-info">
+        <input type="submit" value="Go Back", class="btn-info" >
     </a>
 </body>
 </html>
