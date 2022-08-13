@@ -1,0 +1,26 @@
+## Ignogre vscode file
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.history.vscode/settings.json
+
+## Ignore __pycache__ 
+**/__pycache__/
+
+
+# pyenv
+.python-version
+
+## Ignoring virtualenv 
+.venv
+.Python
+[Bb]in 
+[Ii]nclude/
+[Ll]ib/
+[Ss]cripts
+[Ss]ite-packages/
+[Ll]ib64/
+[Ss]hare/
+pyvenv.cfg
