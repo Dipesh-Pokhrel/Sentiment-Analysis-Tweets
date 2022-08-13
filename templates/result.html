@@ -18,14 +18,14 @@
 
     <div class="container">
 
-        {% if predection == 0 %}
+        {% if predection == 1 %}
             <p style="color:green; font-size:20px; text-align:center;"><b>Positive</b></p>
         {% else %}
             <p style="color:red; font-size:20px; text-align:center;"><b>Negative</b></p>
         {% endif %}
     </div>
-    <a href="" >
-        <input type="submit" value="Go Back" class="btn btn-primary">
+    <a href="{{ url_for('home_page') }}">
+        <input type="submit" value="Go Back" class="btn-info">
     </a>
 </body>
 </html>
