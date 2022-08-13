@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Result </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="bandname"
+               Twitter Sentiment Analysis
+            </div>
+            <h2> Twitter Sentiment predection </h2>
+        </div>
+    </header>
+    <p style="color:blue; font-size:20px; text-align:center;"><b>Result for Tweets</b></p>
+
+    <div class="container">
+
+        {% if predection == 0 %}
+            <p style="color:green; font-size:20px; text-align:center;"><b>Positive</b></p>
+        {% else %}
+            <p style="color:red; font-size:20px; text-align:center;"><b>Negative</b></p>
+        {% endif %}
+    </div>
+    <a href="" >
+        <input type="submit" value="Go Back" class="btn btn-primary">
+    </a>
+</body>
+</html>
