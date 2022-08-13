@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Home </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="bandname"
+               Twitter Sentiment Analysis app with Flask
+            </div>
+            <h2> Twitter Sentiment Analysis: Possitive or Negative Sentiment </h2>
+        </div>
+    </header>
+
+    <div class="ml-nlp-container">
+        <form action="{{ url_for('predict')}}" method="POST">
+            <p> Enter a tweet to analyze: </p>
+            <textarea name="tweet" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" class="btn-info" value="Predict"
+        </form>
+</body>
+</html>
