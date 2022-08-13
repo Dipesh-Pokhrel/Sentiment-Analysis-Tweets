@@ -1,0 +1,1 @@
+In this project, I develop an NLP model for Twitter sentiment analysis and deploy it using Flask and Docker on a local server.
